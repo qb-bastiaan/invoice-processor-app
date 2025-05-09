@@ -1,0 +1,112 @@
+{
+    "tables": [
+        {
+            "description": "Drinkwater verbruik",
+            "currency": "\u20ac",
+            "amount_incl_tax": "",
+            "amount_excl_tax": "-127,89",
+            "tax_amount": "",
+            "tax_percent": "9,00",
+            "invoiced_quantity": "-203",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": "01 jan 2021 - 01 jan 2022"
+        },
+        {
+            "description": "Belasting op leidingwater",
+            "currency": "\u20ac",
+            "amount_incl_tax": "",
+            "amount_excl_tax": "-71,86",
+            "tax_amount": "",
+            "tax_percent": "9,00",
+            "invoiced_quantity": "-203",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": "01 jan 2021 - 01 jan 2022"
+        },
+        {
+            "description": "Vastrecht",
+            "currency": "\u20ac",
+            "amount_incl_tax": "",
+            "amount_excl_tax": "-69,98",
+            "tax_amount": "",
+            "tax_percent": "9,00",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": "01 jan 2021 - 01 jan 2022"
+        },
+        {
+            "description": "BTW (9,00%)",
+            "currency": "\u20ac",
+            "amount_incl_tax": "",
+            "amount_excl_tax": "",
+            "tax_amount": "-24,28",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Totale kosten over deze periode",
+            "currency": "\u20ac",
+            "amount_incl_tax": "-294,01",
+            "amount_excl_tax": "",
+            "tax_amount": "",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Af: voorschotten",
+            "currency": "\u20ac",
+            "amount_incl_tax": "284,36",
+            "amount_excl_tax": "",
+            "tax_amount": "23,48)",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Subtotaal",
+            "currency": "\u20ac",
+            "amount_incl_tax": "-9,65",
+            "amount_excl_tax": "",
+            "tax_amount": "-0,80",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Bij nieuw Voorschot",
+            "currency": "\u20ac",
+            "amount_incl_tax": "-157,89",
+            "amount_excl_tax": "",
+            "tax_amount": "-13,03)",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Betalen",
+            "currency": "\u20ac",
+            "amount_incl_tax": "-167,54",
+            "amount_excl_tax": "",
+            "tax_amount": "",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        }
+    ]
+}

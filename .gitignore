@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated output data
+output-data/
+
+# Design and planning files
+frontend-design/*.txt
+# If gemini_system_prompt.txt is for dev reference only and not read by the app at runtime:
+config/gemini_system_prompt.txt
+# Add other specific planning/prompt files or patterns if needed
+# e.g. DEVELOPMENT_PLAN.md if it were inside invoice-processor

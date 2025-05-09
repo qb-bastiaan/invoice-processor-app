@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InvoiceData",
+  "description": "Schema for extracted invoice data",
+  "type": "object",
+  "properties": {
+    "invoice_id": {
+      "description": "Unique identifier for the invoice, if available (e.g., invoice number)",
+      "type": "string"
+    },
+    "invoice_date": {
+      "description": "Date the invoice was issued (YYYY-MM-DD)",
+      "type": "string"
+    },
+    "invoice_number": {
+      "description": "The official invoice number",
+      "type": "string"
+    },
+    "supplier_name": {
+      "description": "Name of the company that issued the invoice",
+      "type": "string"
+    },
+    "supplier_address": {
+      "description": "Address of the supplier",
+      "type": "string"
+    },
+    "supplier_vat_number": {
+      "description": "VAT registration number of the supplier",
+      "type": "string"
+    },
+    "customer_name": {
+      "description": "Name of the customer being invoiced",
+      "type": "string"
+    },
+    "customer_number": {
+      "description": "Customer account number or identifier",
+      "type": "string"
+    },
+    "customer_address": {
+      "description": "Billing address of the customer",
+      "type": "string"
+    },
+    "customer_vat_number": {
+      "description": "VAT registration number of the customer, if applicable",
+      "type": "string"
+    },
+    "payment_due_date": {
+      "description": "Date by which the payment is due (YYYY-MM-DD)",
+      "type": "string"
+    },
+    "payment_terms": {
+      "description": "Payment terms (e.g., 'Net 30', 'Due on receipt')",
+      "type": "string"
+    },
+    "currency": {
+      "description": "Currency of the amounts (e.g., 'USD', 'EUR')",
+      "type": "string",
+      "pattern": "^(?:[A-Z]{3}|[$€£¥])$"
+    },
+    "line_items": {
+      "description": "List of items or services invoiced",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "total_price": {
+            "type": "number"
+          },
+          "vat_rate": {
+            "description": "VAT rate applied to this line item (e.g., 0.21 for 21%)",
+            "type": "number"
+          },
+          "vat_amount": {
+            "description": "VAT amount for this line item",
+            "type": "number"
+          }
+        },
+        "required": [
+          "description",
+          "quantity",
+          "unit_price",
+          "total_price"
+        ]
+      }
+    },
+    "subtotal_amount": {
+      "description": "Total amount before taxes and discounts",
+      "type": "number"
+    },
+    "discount_amount": {
+      "description": "Total discount amount, if any",
+      "type": "number"
+    },
+    "tax_details": {
+      "description": "Details of different taxes applied",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tax_description": {
+            "description": "Description of the tax (e.g., 'VAT', 'Sales Tax')",
+            "type": "string"
+          },
+          "tax_rate": {
+            "description": "Tax rate (e.g., 0.21 for 21%)",
+            "type": "number"
+          },
+          "tax_amount": {
+            "description": "Amount of this specific tax",
+            "type": "number"
+          }
+        },
+        "required": [
+          "tax_description",
+          "tax_rate",
+          "tax_amount"
+        ]
+      }
+    },
+    "heffing": {
+        "description": "Levy or specific charge, if applicable (common in some regions/invoices)",
+        "type": "number"
+    },
+    "total_amount": {
+      "description": "The final amount due",
+      "type": "number"
+    },
+    "notes": {
+      "description": "Any additional notes or comments from the invoice",
+      "type": "string"
+    },
+    "extraction_confidence": {
+        "description": "Overall confidence score for the extraction of this invoice (0.0 to 1.0)",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+    },
+    "processing_timestamp": {
+        "description": "Timestamp of when the invoice was processed (ISO 8601 format)",
+        "type": "string"
+    },
+    "original_filename": {
+        "description": "The original filename of the invoice",
+        "type": "string"
+    }
+  },
+  "required": [
+    "invoice_date",
+    "invoice_number",
+    "supplier_name",
+    "processing_timestamp",
+    "original_filename"
+  ]
+}

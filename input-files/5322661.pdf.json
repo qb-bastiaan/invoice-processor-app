@@ -1,0 +1,76 @@
+{
+    "tables": [
+        {
+            "description": "Brabant Water N.V.",
+            "currency": "",
+            "amount_incl_tax": "29,44",
+            "amount_excl_tax": "",
+            "tax_amount": "",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Provinciale grondwaterheffing",
+            "currency": "",
+            "amount_incl_tax": "0,47",
+            "amount_excl_tax": "",
+            "tax_amount": "",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Belasting op Leidingwater",
+            "currency": "",
+            "amount_incl_tax": "7,90",
+            "amount_excl_tax": "",
+            "tax_amount": "",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Waterschap De Dommel",
+            "currency": "",
+            "amount_incl_tax": "39,78",
+            "amount_excl_tax": "",
+            "tax_amount": "",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Btw, 9% over \u20ac 37,89*",
+            "currency": "",
+            "amount_incl_tax": "",
+            "amount_excl_tax": "",
+            "tax_amount": "3,41",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        },
+        {
+            "description": "Door u te betalen",
+            "currency": "",
+            "amount_incl_tax": "81,00",
+            "amount_excl_tax": "",
+            "tax_amount": "",
+            "tax_percent": "",
+            "invoiced_quantity": "",
+            "invoiced_quantity_unit": "",
+            "location": "",
+            "period": ""
+        }
+    ]
+}
