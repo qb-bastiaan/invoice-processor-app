@@ -84,12 +84,7 @@
             "type": "number"
           }
         },
-        "required": [
-          "description",
-          "quantity",
-          "unit_price",
-          "total_price"
-        ]
+        "required": ["description", "quantity", "unit_price", "total_price"]
       }
     },
     "subtotal_amount": {
@@ -119,16 +114,12 @@
             "type": "number"
           }
         },
-        "required": [
-          "tax_description",
-          "tax_rate",
-          "tax_amount"
-        ]
+        "required": ["tax_description", "tax_rate", "tax_amount"]
       }
     },
     "heffing": {
-        "description": "Levy or specific charge, if applicable (common in some regions/invoices)",
-        "type": "number"
+      "description": "Levy or specific charge, if applicable (common in some regions/invoices)",
+      "type": "number"
     },
     "total_amount": {
       "description": "The final amount due",
@@ -139,18 +130,18 @@
       "type": "string"
     },
     "extraction_confidence": {
-        "description": "Overall confidence score for the extraction of this invoice (0.0 to 1.0)",
-        "type": "number",
-        "minimum": 0,
-        "maximum": 1
+      "description": "Overall confidence score for the extraction of this invoice (0.0 to 1.0)",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
     },
     "processing_timestamp": {
-        "description": "Timestamp of when the invoice was processed (ISO 8601 format)",
-        "type": "string"
+      "description": "Timestamp of when the invoice was processed (ISO 8601 format)",
+      "type": "string"
     },
     "original_filename": {
-        "description": "The original filename of the invoice",
-        "type": "string"
+      "description": "The original filename of the invoice",
+      "type": "string"
     }
   },
   "required": [

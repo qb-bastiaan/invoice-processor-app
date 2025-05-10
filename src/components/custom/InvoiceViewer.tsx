@@ -1,4 +1,6 @@
-"use client";
+'use client';
+
+import Image from 'next/image';
 
 interface InvoiceViewerProps {
   fileName: string | null | undefined;
@@ -6,10 +8,15 @@ interface InvoiceViewerProps {
   data: string | null | undefined; // Base64 encoded data
 }
 
-const InvoiceViewer: React.FC<InvoiceViewerProps> = ({ fileName, mimeType, data }) => {
+const InvoiceViewer: React.FC<InvoiceViewerProps> = ({
+  fileName,
+  mimeType,
+  data,
+}) => {
   if (!data || !mimeType || !fileName) {
     return (
-      <div className="flex-grow h-full min-h-[24rem] bg-gray-700 rounded-lg flex items-center justify-center text-gray-500 p-4">
+      // This container should also grow if it's the one being rendered
+      <div className="flex items-center justify-center text-gray-500 p-4 bg-gray-800 rounded-lg" style={{ height: '600px' }}>
         <p>(Waiting for invoice preview...)</p>
       </div>
     );
@@ -17,11 +24,11 @@ const InvoiceViewer: React.FC<InvoiceViewerProps> = ({ fileName, mimeType, data 
 
   if (mimeType.startsWith('image/')) {
     return (
-      <div className="flex-grow h-full min-h-[24rem] bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden p-2">
+      <div>
         <img
           src={`data:${mimeType};base64,${data}`}
           alt={`Preview of ${fileName}`}
-          className="max-h-full max-w-full object-contain"
+          style={{ width: '100%', height: '70vh', objectFit: 'contain' }}
         />
       </div>
     );
@@ -29,25 +36,21 @@ const InvoiceViewer: React.FC<InvoiceViewerProps> = ({ fileName, mimeType, data 
 
   if (mimeType === 'application/pdf') {
     return (
-      <div className="flex-grow h-full min-h-[24rem] bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
-        <object
-          data={`data:${mimeType};base64,${data}`}
-          type="application/pdf"
-          className="w-full h-full"
-        >
-          <p className="p-4 text-gray-300">
-            PDF preview not available. Your browser may not support embedding PDFs this way.
-            <br />
-            File: {fileName}
-          </p>
-        </object>
+      <div>
+        <iframe
+          src={`data:${mimeType};base64,${data}`}
+          title={`Preview of ${fileName}`}
+          style={{ width: '100%', height: '70vh', border: 'none' }}
+        />
       </div>
     );
   }
 
   return (
-    <div className="flex-grow h-full min-h-[24rem] bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 p-4">
-      <p>Unsupported preview type: {mimeType} for file {fileName}</p>
+    <div className="flex items-center justify-center text-gray-400 p-4 bg-gray-800 rounded-lg" style={{ height: '600px' }}>
+      <p>
+        Unsupported preview type: {mimeType} for file {fileName}
+      </p>
     </div>
   );
 };
